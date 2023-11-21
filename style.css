@@ -3,3 +3,18 @@ html {
     background-color: seagreen;
     color: palegreen;
 }
+
+img {
+    width: 100%;
+}
+
+.HeaderBanner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-image: url(./assets/Header/Desktop/Peas.jpg);
+    height: 300px;
+
+}
