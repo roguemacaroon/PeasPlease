@@ -1,11 +1,27 @@
 html {
-    font-size: 1rem;
-    background-color: seagreen;
-    color: palegreen;
+    font-size: 1.50rem;
+    background-color: var(--BackgroundGreenColor);
+    color: var(--BodyGreenColor);
+}
+
+:root {
+    /* Colors */
+    --BackgroundGreenColor: seagreen;
+    --HeaderGreenColor: #4f5f0a;
+    --SecondaryGreenColor: #739122;
+    --BodyGreenColor: #2a3305;
+    /* Fonts */
+    --PopupText: 1.25rem;
+    --Headers: 2rem;
+    --Body: 1.50rem;
 }
 
 img {
     width: 100%;
+}
+
+h1 {
+    font-size: var(--Headers);
 }
 
 .HeaderBanner {
@@ -19,32 +35,41 @@ img {
 
 }
 
+.Wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
 /* trying pop up */
 /* Popup container */
-.popup {
+.Popup {
     position: relative;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     cursor: pointer;
 }
 
 /* The actual popup (appears on top) */
-.popup .popuptext {
+.Popup .PopupText {
     visibility: hidden;
-    width: 160px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
+    width: fit-content;
+    text-align: left;
     position: absolute;
     z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -80px;
+
+    background-color: var(--SecondaryGreenColor);
+    color: var(--BodyGreenColor);
+    font-size: var(--PopupText);
+
 }
 
 /* Popup arrow */
-.popup .popuptext::after {
+.Popup .PopupText::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -56,7 +81,7 @@ img {
 }
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popup .show {
+.Popup .show {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s
